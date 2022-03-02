@@ -29,10 +29,9 @@ def matrixDet(mat):
                 col=col+1
             row=row+1
         x=x+1
-        reduceDet=(detmulti*((detnew[0]*detnew[3])-(detnew[1]*detnew[2])))
-        print(reduceDet)
+        reduceDet.append(detmulti*((detnew[0]*detnew[3])-(detnew[1]*detnew[2])))
 
-        
+        print(reduceDet)
           
     
 
