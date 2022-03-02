@@ -9,8 +9,26 @@ for x in range(size):
 
     mat.append(mattemp)
     mattemp=[]
-
-
+# used to find the det of a square matrix 
+## takes in each minor and multiples it by the sum of the smaller matrix
+def matrixDet(mat):
+    detnew=[]
+    x=1
+    row=1
+    print(len(mat))
+    while(x<len(mat)):
+        dettemp=mat[0]
+        detmulti=detemp[x]
+        while(row<len(mat)):
+            col=1
+            print("loop")
+            dettemp=mat[row]
+            while(col<len(mat)):
+                detnew.append(dettemp[col])
+                col=col+1
+            row=row+1
+        x=x+1    
+    print(detnew)
 
 
 def matrixInverse(mat):
@@ -42,11 +60,11 @@ def matrixInverse(mat):
 
 matrixInverse(mat)
 y=0
-
+matrixDet(mat)
 while(y<len(mat)):
     
        
-    print(mat[1], end=",")
+    print(mat[y], end="\n")
     #print(y)
     y=y+1
 
