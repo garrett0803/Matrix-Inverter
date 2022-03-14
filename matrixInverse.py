@@ -15,7 +15,8 @@ for x in range(size):
 def CreateIdentityArr(size):
     x=0
     while(x<size):
-        
+        return 0
+
 
 def matrixDet(mat):
     reduceDet=[]
