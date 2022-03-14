@@ -11,6 +11,12 @@ for x in range(size):
     mattemp=[]
 # used to find the det of a square matrix 
 ## takes in each minor and multiples it by the sum of the smaller matrix
+
+def CreateIdentityArr(size):
+    x=0
+    while(x<size):
+        
+
 def matrixDet(mat):
     reduceDet=[]
     detnew=[]
@@ -37,6 +43,8 @@ def matrixDet(mat):
 
 
 def matrixInverse(mat):
+    #for each row reduce col x to 1 and all other rows to 0
+    ## create a array with 
     if(len(mat)==4):
         i=0
         while(i<4):
