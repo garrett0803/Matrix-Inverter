@@ -23,10 +23,13 @@ def CreateIdentityArr(size):
     
 
     
-        
+    #creating a matrix with size 3 with the following values
+    # 1 0 0
+    # 0 1 0
+    # 0 0 1   
     while(x<size):
         y=0
-        print(x)
+        
         while(y<size):
             if(x==y):
                 iMat[x].append(1)
@@ -46,10 +49,12 @@ def matrixDet(mat):
     detmulti=[]
     x=0
     row=1
+    #trav arr to reduce and find DET
     while(x<len(mat)):
         dettemp=mat[0]
         detmulti=dettemp[x]
         print(detmulti)
+        
         while(row<len(mat)):
             col=1
             dettemp=mat[row]
@@ -68,8 +73,9 @@ def matrixDet(mat):
 def matrixInverse(mat):
     #for each row reduce col x to 1 and all other rows to 0
     ## create a array with identity mat
+    i=0
     if(len(mat)==4):
-        i=0
+    
         while(i<4):
             if(i==1 or i==2):
             #print(mat[i])
@@ -81,18 +87,13 @@ def matrixInverse(mat):
                 mat[3]=temp
 
             i=i+1  
-
+    elif(len(mat)==3):
+        while(i<len(mat)):
+            mat[0]
 
     #TODO need to turn a certain matrix into a identity matrix and do the same operations to a identity matrix
     a=0
     #while(a<len(mat)):
-
-
-  
-            
-
-
-
 
 matrixInverse(mat)
 
@@ -101,17 +102,10 @@ CreateIdentityArr(size)
 y=0
 
 while(y<len(iMat)):
-    
-    
        
     print(iMat[y], end="\n")
     #print(y)
     y=y+1
-
-
-
-
-
 
 
 #TODO need to turn a certain matrix into a identity matrix and do the same operations to a identity matrix
