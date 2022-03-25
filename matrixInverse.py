@@ -1,11 +1,7 @@
 size=int(input('enter size of square matrix: '))
 mat=[]
 mattemp=[]
-t1=[]
-t2=[]
-t3=[]
 
-iMat=[t1,t2,t3]
 
 
 for x in range(size):
@@ -23,8 +19,8 @@ def CreateIdentityArr(size):
     
 
     
-    #creating a matrix with size 3 with the following values
-    # 1 0 0
+    #creating a matrix with size N with the following patter
+    # 1 0 0 
     # 0 1 0
     # 0 0 1   
     while(x<size):
@@ -38,7 +34,6 @@ def CreateIdentityArr(size):
                 iMat[x].append(0)  
 
             y=y+1      
-
         x=x+1
         
 
@@ -89,18 +84,28 @@ def matrixInverse(mat):
             i=i+1  
     elif(len(mat)==3):
         while(i<len(mat)):
-            mat[0]
+            #TODO make terms not equal to i zero
+
+            temp=mat[i]
+            div=temp[i]
+            k=0
+            #goes over len of row and makes the ith term equal to 1 
+            while(k<len(mat)):
+                temp[k]=temp[k]/div
+                k=+1
+            i=+1
+
 
     #TODO need to turn a certain matrix into a identity matrix and do the same operations to a identity matrix
     a=0
     #while(a<len(mat)):
 
-matrixInverse(mat)
+#matrixInverse(mat)
 
 matrixDet(mat)
 CreateIdentityArr(size)
 y=0
-
+temp=mat[0]
 while(y<len(iMat)):
        
     print(iMat[y], end="\n")
